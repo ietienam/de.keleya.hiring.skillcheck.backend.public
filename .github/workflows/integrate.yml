@@ -15,4 +15,4 @@ jobs:
         with:
           node-version: 14
       - run: rm -rf node_modules && yarn install --frozen-lockfile
-      - run: npm run test:e2e
+      - run: npm run build
