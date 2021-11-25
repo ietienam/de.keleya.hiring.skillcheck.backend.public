@@ -73,6 +73,7 @@ Command lines:
 
 ...
 ![my_postman_tests.png](my_postman_tests.png)
+- Postman screenshot
 ### Why only e2e tests were implemented and unit/integration tests were not implemented
 I did not implement unit/integration tests because I implemented e2e tests which checked and validated the overall behavior of the api service. On the e2e tests, I ensured happy and sad scenarios were tested to ensure the api service behaves as expected
 
