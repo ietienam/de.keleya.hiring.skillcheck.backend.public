@@ -2,6 +2,7 @@ import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { useContainer } from 'class-validator';
 import { AppModule } from './app.module';
+import { PrismaService } from './prisma.services';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -14,6 +15,8 @@ async function bootstrap() {
   console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
   // enable useContainer to be able to inject into class validators
   useContainer(app.select(AppModule), { fallbackOnErrors: true });
+  const prismaService: PrismaService = app.get(PrismaService);
+  prismaService.enableShutdownHooks(app);
   await app.listen(configService.get('PORT'));
 }
 bootstrap();

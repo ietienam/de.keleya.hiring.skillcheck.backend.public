@@ -72,3 +72,20 @@ Command lines:
 ### Your Notes Below Here
 
 ...
+### Why only e2e tests were implemented and unit/integration tests were not implemented
+I did not implement unit/integration tests because I implemented e2e tests which checked and validated the overall behavior of the api service. On the e2e tests, I ensured happy and sad scenarios were tested to ensure the api service behaves as expected
+
+### Improvements to endpoints
+- GET /user should be /users
+  - The resource endpoint should be plural because we will be expecting an array of users
+- GET /user/:id should be /users/:id
+  - We check the users resource to retrieve a specific user
+- POST /user should be /users
+  - We are adding a new user into the users collection
+- PATCH /user should be /users/:id
+  - The id of the user to be updated should be passed as a param, not in the request body
+- DELETE /user should be users/:id
+  - The id of the user to be deleted should be passed as a param, not in the request body
+
+### How long this took...
+This took me 4 days to complete(Monday Nov. 22 - Thursday Nov 25). I received this task on Friday, the 19th of November but only began working on it from Monday, Nov. 22. This was because Saturday(Nov. 20) was my birthday and there were celebrations and blackouts.

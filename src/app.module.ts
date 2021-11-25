@@ -24,7 +24,7 @@ import { AppController } from './app.controller';
         JWT_SECRET: Joi.string(),
       }),
     }),
-    PassportModule,
+    PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.registerAsync({
       imports: [ConfigModule],
       inject: [ConfigService],

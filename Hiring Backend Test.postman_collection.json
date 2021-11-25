@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2cea11e6-4ded-4be1-bfae-4b955f5168c5",
+		"_postman_id": "9a7c929d-ff7b-49d3-b165-382515a78e9d",
 		"name": "Hiring Backend Test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -15,9 +15,9 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Value should be 3\", function () {",
+									"pm.test(\"Value should be 1\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData[0].id).to.eql(3);",
+									"    pm.expect(jsonData[0].id).to.eql(1);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -46,9 +46,9 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Value should be 3\", function () {",
+									"pm.test(\"Value should be 1\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData[0].id).to.eql(3);",
+									"    pm.expect(jsonData[0].id).to.eql(1);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -126,13 +126,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/user/3",
+							"raw": "{{baseurl}}/user/1",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"user",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -151,12 +151,12 @@
 									"",
 									"pm.test(\"Name is updated\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.name).to.eql('new name');",
+									"    pm.expect(jsonData.name).to.eql('new name ma');",
 									"});",
 									"",
 									"pm.test(\"Updated At != Created At\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.updatedAt).to.not.eql(jsonData.createdAt);",
+									"    pm.expect(jsonData.updated_at).to.not.eql(jsonData.created_at);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -168,7 +168,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 3,\n    \"name\": \"new name\"\n}",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"new name ma\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -213,7 +213,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"mamaUser@fake-mail.com\",\n    \"password\": \"password\"\n}",
+							"raw": "{\n    \"email\": \"memart@simpson.com\",\n    \"password\": \"password\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -263,7 +263,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"mamaUser@fake-mail.com\",\n    \"password\": \"password\"\n}",
+							"raw": "{\n    \"email\": \"memart@simpson.com\",\n    \"password\": \"password\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -303,6 +303,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{baseurl}}/user/validate",
 							"host": [
@@ -377,7 +386,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"mamaUser@fake-mail.com\",\n    \"password\": \"password\"\n}",
+							"raw": "{\n    \"email\": \"lema@simpson.com\",\n    \"password\": \"password\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -427,7 +436,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"mamaUser@fake-mail.com\",\n    \"password\": \"password\"\n}",
+							"raw": "{\n    \"email\": \"lema@simpson.com\",\n    \"password\": \"password\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -563,8 +572,8 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 401\", function () {",
-									"    pm.response.to.have.status(401);",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -575,13 +584,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/user/2",
+							"raw": "{{baseurl}}/user/1",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"user",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -607,7 +616,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"New User\",\n\t\"email\": \"newuser@fake-mail.com\",\n\t\"password\": \"password\"\n}",
+							"raw": "{\n\t\"name\": \"New User\",\n\t\"email\": \"newudsdr@fake-mail.com\",\n\t\"password\": \"password\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -651,7 +660,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"id\": 6\n}",
+							"raw": "{\n\t\"id\": 3\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -688,7 +697,7 @@
 									"",
 									"pm.test(\"Updated At != Created At\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.updatedAt).to.not.eql(jsonData.createdAt);",
+									"    pm.expect(jsonData.updated_at).to.not.eql(jsonData.created_at);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -767,6 +776,12 @@
 			"script": {
 				"type": "text/javascript",
 				"exec": [
+					"pm.environment.get(\"variable_key\");",
+					"pm.globals.get(\"variable_key\");",
+					"pm.variables.get(\"variable_key\");",
+					"pm.collectionVariables.get(\"variable_key\");",
+					"pm.environment.set(\"variable_key\", \"variable_value\");",
+					"",
 					""
 				]
 			}
@@ -779,11 +794,11 @@
 		},
 		{
 			"key": "tokenUser",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbWFVc2VyQGZha2UtbWFpbC5jb20iLCJpZCI6MywiaWF0IjoxNjM3MjM1ODI5LCJleHAiOjE2Njg3OTM0Mjl9.gZJE2WIXw9Rbwc4Eouv5hOwDrfzf6bY-wx3fYbhHyMA"
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJtZW1hcnRAc2ltcHNvbi5jb20iLCJhZG1pbiI6ZmFsc2UsImlhdCI6MTYzNzc4NTk2MywiZXhwIjoxNjY5MzQzNTYzfQ.55DAJjmmIIt-AQVpJS3_7pq9T7XHb3W_IDFzAA_Ff-g"
 		},
 		{
 			"key": "tokenAdmin",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluQGZha2UtbWFpbC5jb20iLCJpZCI6NCwiaWF0IjoxNjM3MzM3ODg0LCJleHAiOjE2Njg4OTU0ODR9.b79XlIFEnTIE0A0RWJA2pK2atSb1bpRzkC0nNGzGIxQ"
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJsZW1hQHNpbXBzb24uY29tIiwiYWRtaW4iOnRydWUsImlhdCI6MTYzNzc4NjAxMywiZXhwIjoxNjY5MzQzNjEzfQ.H4pWXUrg05luXQaebD4bKPZjnAIT-NwmF8DnWizftHg"
 		}
 	]
 }
